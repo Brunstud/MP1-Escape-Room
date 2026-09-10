@@ -1,0 +1,10 @@
+Thanks for downloading the Victorian Study 3D Asset Pack!
+
+Folder Contents:
+
+Materials - Unity Materials (.mat)
+Models - 3D Objects (.fbx)
+Scenes - Unity Sample Scene with all assets
+Textures - For creating materials
+
+Please give credit to "FoxDev" on commercial projects.

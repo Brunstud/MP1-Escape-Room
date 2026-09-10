@@ -5,8 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Shicheng/Scenes/MP1A_PrincipalOffice.unity
+    guid: 337392523b4f8aa4e8a2ff2b02fab5f4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7662a32df690b06419d6c455ea7d77f5, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 534fc360fd66aa744ad6abb6b61b36b4, type: 2}

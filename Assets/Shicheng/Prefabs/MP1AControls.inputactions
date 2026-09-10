@@ -1,0 +1,120 @@
+{
+    "version": 1,
+    "name": "MP1AControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "99606570-c49d-4c46-8ab7-2d003a18810d",
+            "actions": [
+                {
+                    "name": "ChangeLight",
+                    "type": "Button",
+                    "id": "2dfb2baa-12af-4926-8397-9deede47cb32",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "ToggleView",
+                    "type": "Button",
+                    "id": "f755dddc-532b-4628-ba03-01294e45ae19",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "7178858b-a524-4721-b908-55aee4b76b65",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "SpawnOrb",
+                    "type": "Button",
+                    "id": "47efefee-c471-431b-bc93-49f228366a22",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "PlayNextSound",
+                    "type": "Button",
+                    "id": "054af6f4-aa50-405f-89e3-f83299a2f4fa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a869432e-3d7f-406f-b784-200c341b0ccd",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99ddd546-2703-40df-805c-d97b27a41511",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleView",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cebd034d-bf45-4da8-96a2-5e0a53c42559",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1cc07d3-f31d-4171-a642-ba3de5ef854c",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnOrb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cc317b4-fbc0-4019-8278-57ce0d563db4",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayNextSound",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
