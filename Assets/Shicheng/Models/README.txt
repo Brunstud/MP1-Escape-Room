@@ -23,3 +23,21 @@ https://foxdevart.itch.io/victorian-study-3d-asset-pack
 
 https://sketchfab.com/3d-models/steinsgate-time-machine-f0aa81a123b54f77ac2ff4a4630cc050
 "[Steins;Gate] Time machine" (https://skfb.ly/6RwGH) by mrTorch is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/simple-wooden-door-19e6a54d3d14466a9099d58c71619d5a
+"Simple Wooden Door" (https://skfb.ly/oUoTV) by kusuma844 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/old-office-window-6851ada65b23464da79eb5468c1cee3d
+"Old Office Window" (https://skfb.ly/6WMFq) by sudreyskr is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/grandfather-clock-cef39f1bd3df43578236f273f273a873
+"Grandfather Clock" (https://skfb.ly/6XN6V) by Lyskilde is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/vintage-gramophone-a7508a4233a344008029d21a2f0024bd
+"Vintage Gramophone" (https://skfb.ly/6SFI6) by Maxim Mavrichev is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/steinsgate-divergence-meter-65646a3a705642cca0dd290753cf481b
+"[Steins;Gate] Divergence Meter" (https://skfb.ly/6VJWw) by G.Salmon is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://sketchfab.com/3d-models/vintage-metronome-5f76f9ecd6624681b148783fb76a4854
+"Vintage Metronome" (https://skfb.ly/o9K7o) by Weekless is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
