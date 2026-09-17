@@ -285,23 +285,14 @@ public class TimeMachineProgress : MonoBehaviour
     {
         if (!AllPartsInstalled())
         {
-            int partCount = 0;
-
-            if (part1Installed)
-                partCount++;
-
-            if (part2Installed)
-                partCount++;
-
-            if (part3Installed)
-                partCount++;
+            string part1 = part1Installed ? "●" : "○";
+            string part2 = part2Installed ? "●" : "○";
+            string part3 = part3Installed ? "●" : "○";
 
             statusText.text =
-                "AION TEMPORAL DRIVE\n\n" +
-                "PRIMARY REPAIR\n\n" +
-                "Recover the three missing machine parts.\n" +
-                "Match each part with its missing position.\n\n" +
-                "PARTS RESTORED: " + partCount + " / 3";
+                "REPAIR THE TIME MACHINE\n" +
+                "Find and restore 3 missing parts.\n" +
+                part1 + "  " + part2 + "  " + part3;
         }
         else if (!AllFuelInstalled())
         {
@@ -312,19 +303,15 @@ public class TimeMachineProgress : MonoBehaviour
                 resonantMetalInstalled ? "READY" : "MISSING";
 
             statusText.text =
-                "AION TEMPORAL DRIVE\n\n" +
-                "PRIMARY REPAIR COMPLETE\n\n" +
-                "START-UP MATERIALS REQUIRED\n\n" +
-                "POWER SOURCE       " + powerText + "\n" +
-                "RESONANT METAL     " + metalText;
+                "START-UP MATERIALS\n" +
+                "POWER: " + powerText + "\n" +
+                "METAL: " + metalText;
         }
         else
         {
             statusText.text =
-                "AION TEMPORAL DRIVE\n\n" +
-                "START-UP MATERIALS COMPLETE\n\n" +
-                "SYSTEM READY\n\n" +
-                "Enter the temporal chamber.";
+                "TIME MACHINE READY\n" +
+                "Enter the chamber.";
         }
     }
 }
