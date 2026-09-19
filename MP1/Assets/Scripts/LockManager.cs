@@ -10,7 +10,17 @@ public class LockManager : MonoBehaviour
 
         Debug.Log("Lock completed: " + locksCompleted);
 
-        if (locksCompleted >= 3)
+        if (locksCompleted == 1)
+        {
+            Debug.Log("CORE CALIBRATED");
+        }
+
+        if (locksCompleted == 2)
+        {
+            Debug.Log("POWER CALIBRATED");
+        }
+
+        if (locksCompleted == 3)
         {
             Debug.Log("ALL LOCKS COMPLETED!");
         }
