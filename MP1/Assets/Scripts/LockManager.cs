@@ -3,6 +3,7 @@ using UnityEngine;
 public class LockManager : MonoBehaviour
 {
     public int locksCompleted = 0;
+    public GameObject winMessage;
 
     public void CompleteLock()
     {
@@ -12,17 +13,21 @@ public class LockManager : MonoBehaviour
 
         if (locksCompleted == 1)
         {
-            Debug.Log("CORE CALIBRATED");
+            Debug.Log("LOCK 1 CALIBRATED");
         }
 
         if (locksCompleted == 2)
         {
-            Debug.Log("POWER CALIBRATED");
+            Debug.Log("LOCK 2 CALIBRATED");
         }
 
         if (locksCompleted == 3)
         {
             Debug.Log("ALL LOCKS COMPLETED!");
+            if (winMessage != null)
+            {
+                winMessage.SetActive(true);
+            }
         }
     }
 }
