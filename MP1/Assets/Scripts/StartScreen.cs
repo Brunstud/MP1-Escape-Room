@@ -6,6 +6,7 @@ public class StartScreen : MonoBehaviour
 
     public void BeginExperiment()
     {
+        Debug.Log("Button clicked");
         startScreen.SetActive(false);
     }
 }
