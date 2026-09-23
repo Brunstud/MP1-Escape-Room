@@ -549,11 +549,11 @@ MonoBehaviour:
   ghostAlpha: 0.35
   powerSourceSocket: {fileID: 1186380180}
   resonantMetalSocket: {fileID: 763760932}
-  part1Installed: 1
-  part2Installed: 1
-  part3Installed: 1
-  powerSourceInstalled: 1
-  resonantMetalInstalled: 1
+  part1Installed: 0
+  part2Installed: 0
+  part3Installed: 0
+  powerSourceInstalled: 0
+  resonantMetalInstalled: 0
   part1Discovered: 0
   part2Discovered: 0
   part3Discovered: 0
@@ -4213,7 +4213,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64541349016894012, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4229,6 +4230,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1962189107699062, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 472584882}
+    - targetCorrespondingSourceObject: {fileID: 1962189107699062, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472584887}
   m_SourcePrefab: {fileID: 100100000, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
 --- !u!4 &472584878 stripped
 Transform:
@@ -4238,11 +4242,6 @@ Transform:
 --- !u!1 &472584879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1962189107699062, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
-  m_PrefabInstance: {fileID: 472584877}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &472584880 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 64541349016894012, guid: 9ae4e56d111938948b75f4dd9802a5c9, type: 3}
   m_PrefabInstance: {fileID: 472584877}
   m_PrefabAsset: {fileID: 0}
 --- !u!23 &472584881 stripped
@@ -4293,7 +4292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 472584880}
+  - {fileID: 472584887}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -4449,6 +4448,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &472584887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472584879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4144467, y: 0.16454865, z: 0.26403633}
+  m_Center: {x: -0.19040367, y: 0.08227422, z: -0.11947127}
 --- !u!1001 &514202096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15921,7 +15941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimeLoopManager
   musicSource: {fileID: 727368719}
   metronomeSource: {fileID: 544039486}
-  loopTime: 10
+  loopTime: 100
   countdownTimer: {fileID: 421393489}
   xrOrigin: {fileID: 1348739649}
   PlayerSpawn: {fileID: 1880420500}
