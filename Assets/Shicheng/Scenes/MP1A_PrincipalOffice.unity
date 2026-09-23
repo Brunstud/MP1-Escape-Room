@@ -549,11 +549,11 @@ MonoBehaviour:
   ghostAlpha: 0.35
   powerSourceSocket: {fileID: 1186380180}
   resonantMetalSocket: {fileID: 763760932}
-  part1Installed: 0
-  part2Installed: 0
-  part3Installed: 0
-  powerSourceInstalled: 0
-  resonantMetalInstalled: 0
+  part1Installed: 1
+  part2Installed: 1
+  part3Installed: 1
+  powerSourceInstalled: 1
+  resonantMetalInstalled: 1
   part1Discovered: 0
   part2Discovered: 0
   part3Discovered: 0
@@ -4479,7 +4479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1680501587, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
@@ -4499,7 +4499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.38268343
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4507,7 +4507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.92387956
+      value: -0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4519,7 +4519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 135
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4572,12 +4572,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515333392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.39, y: 0.564, z: 0.05}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: -0.000000029802319, y: -0.000000029802319, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.3560004, y: 0.2256, z: 0.01999998}
+  m_LocalScale: {x: 0.39999995, y: 0.39999998, z: 0.40000004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 780043285}
+  m_Father: {fileID: 1655463627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!23 &515333394
 MeshRenderer:
@@ -4704,6 +4704,18 @@ MonoBehaviour:
       - m_Target: {fileID: 22799353}
         m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
         m_MethodName: Part1Discovered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle1Clue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5440,6 +5452,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle2Clue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -5572,6 +5596,7 @@ Transform:
   - {fileID: 313500797}
   - {fileID: 1186380181}
   - {fileID: 763760933}
+  - {fileID: 1655463627}
   m_Father: {fileID: 1540311342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &574274816
@@ -6482,16 +6507,7 @@ PrefabInstance:
     - {fileID: 8416272007918961125, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
     - {fileID: 4356877828898064976, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
     - {fileID: 225400215010513126, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 515333393}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
-      insertIndex: 8
-      addedObject: {fileID: 1765929331}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
-      insertIndex: 29
-      addedObject: {fileID: 1458246497}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c963a7e3c8ca0064385a96971f3d4b1d, type: 3}
       insertIndex: -1
@@ -7324,6 +7340,18 @@ MonoBehaviour:
       - m_Target: {fileID: 22799353}
         m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
         m_MethodName: PowerSourceDiscovered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle2Clue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12766,12 +12794,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458246496}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4240565, y: -0.78204036, z: -0.43591654, w: 0.13625613}
-  m_LocalPosition: {x: 6.243, y: 4.74, z: -10.865}
-  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_LocalRotation: {x: 0.42405653, y: -0.78204036, z: -0.43591654, w: 0.13625613}
+  m_LocalPosition: {x: 2.4972007, y: 1.8959999, z: -4.3460007}
+  m_LocalScale: {x: 0.40000004, y: 0.39999992, z: 0.39999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 780043285}
+  m_Father: {fileID: 1655463627}
   m_LocalEulerAnglesHint: {x: -34.489, y: -135, z: -71.59}
 --- !u!114 &1458246498
 MonoBehaviour:
@@ -12841,6 +12869,18 @@ MonoBehaviour:
       - m_Target: {fileID: 22799353}
         m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
         m_MethodName: Part3Discovered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle1Clue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14722,6 +14762,40 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1655463626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655463627}
+  m_Layer: 0
+  m_Name: Comps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655463627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655463626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 515333393}
+  - {fileID: 1765929331}
+  - {fileID: 1458246497}
+  m_Father: {fileID: 565063494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1656337634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15112,6 +15186,18 @@ MonoBehaviour:
       - m_Target: {fileID: 22799353}
         m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
         m_MethodName: ResonantMetalDiscovered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle2Clue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16027,12 +16113,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765929330}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 15.8, y: 0.33, z: 11.49}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 6.320002, y: 0.13200001, z: 4.5960016}
+  m_LocalScale: {x: 0.39999998, y: 0.4, z: 0.39999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 780043285}
+  m_Father: {fileID: 1655463627}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &1765929332
 MeshRenderer:
@@ -16159,6 +16245,18 @@ MonoBehaviour:
       - m_Target: {fileID: 22799353}
         m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
         m_MethodName: Part2Discovered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22799353}
+        m_TargetAssemblyTypeName: TimeMachineProgress, Assembly-CSharp
+        m_MethodName: FindPuzzle1Clue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
