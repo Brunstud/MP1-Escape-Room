@@ -549,11 +549,11 @@ MonoBehaviour:
   ghostAlpha: 0.35
   powerSourceSocket: {fileID: 1186380180}
   resonantMetalSocket: {fileID: 763760932}
-  part1Installed: 1
-  part2Installed: 1
-  part3Installed: 1
-  powerSourceInstalled: 1
-  resonantMetalInstalled: 1
+  part1Installed: 0
+  part2Installed: 0
+  part3Installed: 0
+  powerSourceInstalled: 0
+  resonantMetalInstalled: 0
   part1Discovered: 0
   part2Discovered: 0
   part3Discovered: 0
