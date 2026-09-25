@@ -8,6 +8,8 @@ public class CollectibleManager : MonoBehaviour
     public int totalCollectibles = 5;
 
     private int collectedCount = 0;
+    public int CollectedCount => collectedCount;
+    public int TotalCollectibles => totalCollectibles;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

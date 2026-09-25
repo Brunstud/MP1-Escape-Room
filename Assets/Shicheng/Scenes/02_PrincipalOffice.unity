@@ -550,10 +550,10 @@ MonoBehaviour:
   powerSourceSocket: {fileID: 1186380180}
   resonantMetalSocket: {fileID: 763760932}
   part1Installed: 0
-  part2Installed: 0
-  part3Installed: 0
-  powerSourceInstalled: 0
-  resonantMetalInstalled: 0
+  part2Installed: 1
+  part3Installed: 1
+  powerSourceInstalled: 1
+  resonantMetalInstalled: 1
   part1Discovered: 0
   part2Discovered: 0
   part3Discovered: 0
@@ -2580,6 +2580,7 @@ Transform:
   - {fileID: 629089058}
   - {fileID: 1765420108}
   - {fileID: 1764838497}
+  - {fileID: 1843538699}
   m_Father: {fileID: 596662194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275627406
@@ -4542,6 +4543,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+--- !u!114 &514202097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1883230248363655243, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 514202096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &514202098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8877177980677234388, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 514202096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515333392
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,9 +6431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeMachineGate
   progress: {fileID: 22799353}
-  xrOrigin: {fileID: 1348739649}
-  leftHandInteractor: {fileID: 1790404653}
-  rightHandInteractor: {fileID: 2128074393}
+  countdownTimer: {fileID: 0}
+  collectibleManager: {fileID: 0}
+  leftInteractor: {fileID: 0}
+  rightInteractor: {fileID: 0}
 --- !u!4 &629089058
 Transform:
   m_ObjectHideFlags: 0
@@ -16614,11 +16638,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1783771166}
   m_maskType: 0
---- !u!1 &1790404653 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 514202096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1790493807 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4371287806813256205, guid: f9d9c509ca7df4a4eb980c5479368668, type: 3}
@@ -16715,6 +16734,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796793341}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1843538698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843538699}
+  - component: {fileID: 1843538700}
+  m_Layer: 0
+  m_Name: SceneCarryTargets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843538699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843538698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 266852308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843538700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843538698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4553b4b47a7e8d24eaf44a88d6f9738f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneCarryTargets
+  leftInteractor: {fileID: 514202098}
+  rightInteractor: {fileID: 514202097}
 --- !u!1 &1847355875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2731465206210111506, guid: 4995dd91264436a49863978e55f96784, type: 3}
@@ -18868,11 +18933,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0416849, y: 0.8307206, z: 0.54932654}
   m_Center: {x: -0.00000047683716, y: 0.41536447, z: -0.000000029802322}
---- !u!1 &2128074393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 514202096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

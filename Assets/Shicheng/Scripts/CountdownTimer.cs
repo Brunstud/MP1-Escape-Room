@@ -11,6 +11,7 @@ public class CountdownTimer : MonoBehaviour
     public UnityEvent onTimeUp;
 
     private float timeLeft;
+    public float TimeLeft => timeLeft;
     private bool timerRunning = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
