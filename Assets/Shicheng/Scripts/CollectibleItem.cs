@@ -3,6 +3,10 @@ using UnityEngine;
 public class CollectibleItem : MonoBehaviour
 {
     public CollectibleManager collectibleManager;
+    public string evidenceTitle;
+
+    [TextArea(5, 12)]
+    public string evidenceRecord;
 
     private bool collected = false;
 
@@ -29,8 +33,8 @@ public class CollectibleItem : MonoBehaviour
         collected = true;
 
         if (collectibleManager != null)
-            collectibleManager.AddCollectible();
-
-        gameObject.SetActive(false);
+            collectibleManager.ShowEvidence(this);
+        else
+            gameObject.SetActive(false);
     }
 }

@@ -58,6 +58,14 @@ public class CountdownTimer : MonoBehaviour
         onTimeUp.Invoke();
     }
 
+    public void SetTimeLimit(float seconds)
+    {
+        startTime = seconds;
+        timeLeft = seconds;
+        timerRunning = true;
+        UpdateTimerText();
+    }
+
     public void ResetTimer()
     {
         timeLeft = startTime;

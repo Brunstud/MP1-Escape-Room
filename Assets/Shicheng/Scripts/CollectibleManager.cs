@@ -4,6 +4,11 @@ using TMPro;
 public class CollectibleManager : MonoBehaviour
 {
     public TMP_Text collectibleText;
+    public GameObject evidencePanel;
+    public TMP_Text evidenceTitleText;
+    public TMP_Text evidenceRecordText;
+
+    private CollectibleItem pendingCollectible;
 
     public int totalCollectibles = 5;
 
@@ -16,6 +21,8 @@ public class CollectibleManager : MonoBehaviour
     void Start()
     {
         UpdateScoreboard();
+        if (evidencePanel != null)
+            evidencePanel.SetActive(false);
     }
 
 
@@ -25,6 +32,25 @@ public class CollectibleManager : MonoBehaviour
 
     }
 
+
+    public void ShowEvidence(CollectibleItem item)
+    {
+        pendingCollectible = item;
+        evidenceTitleText.text = item.evidenceTitle + "\n[RECOVERED]";
+        evidenceRecordText.text = item.evidenceRecord;
+        evidencePanel.SetActive(true);
+    }
+
+    public void ArchiveEvidence()
+    {
+        if (pendingCollectible == null)
+            return;
+
+        AddCollectible();
+        pendingCollectible.gameObject.SetActive(false);
+        pendingCollectible = null;
+        evidencePanel.SetActive(false);
+    }
 
     public void AddCollectible()
     {
