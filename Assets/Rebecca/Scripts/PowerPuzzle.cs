@@ -5,6 +5,12 @@ public class PowerPuzzle : MonoBehaviour
     private int currentStep = 0;
 
     public GameObject panel;
+    public GameObject key;
+
+    void Start()
+    {
+        key.SetActive(false);
+    }
 
     public void PressButton(int buttonNumber)
     {
@@ -24,6 +30,7 @@ public class PowerPuzzle : MonoBehaviour
             Debug.Log("POWER PUZZLE COMPLETE!");
 
             panel.SetActive(false);
+            key.SetActive(true);
         }
         else
         {

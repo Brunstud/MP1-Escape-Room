@@ -5,6 +5,12 @@ public class NavPuzzle : MonoBehaviour
     private int currentStep = 0;
 
     public GameObject panel;
+    public GameObject key;
+
+    void Start()
+    {
+        key.SetActive(false);
+    }
 
     public void PressButton(int buttonNumber)
     {
@@ -22,7 +28,9 @@ public class NavPuzzle : MonoBehaviour
         {
             currentStep = 3;
             Debug.Log("NAV PUZZLE COMPLETE!");
+
             panel.SetActive(false);
+            key.SetActive(true);
         }
         else
         {
