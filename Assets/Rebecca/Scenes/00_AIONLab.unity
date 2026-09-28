@@ -7329,7 +7329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c0c7bd89c571040bbafbc888f34cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockManager
-  locksCompleted: 3
+  locksCompleted: 0
   winMessage: {fileID: 1242623092}
   nextSceneName: 02_PrincipalOffice
   transitionDelay: 2
@@ -7912,7 +7912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.7
+  m_ScaleFactor: 0.6
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

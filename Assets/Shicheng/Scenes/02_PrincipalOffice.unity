@@ -550,10 +550,10 @@ MonoBehaviour:
   powerSourceSocket: {fileID: 1186380180}
   resonantMetalSocket: {fileID: 763760932}
   part1Installed: 0
-  part2Installed: 1
-  part3Installed: 1
-  powerSourceInstalled: 1
-  resonantMetalInstalled: 1
+  part2Installed: 0
+  part3Installed: 0
+  powerSourceInstalled: 0
+  resonantMetalInstalled: 0
   part1Discovered: 0
   part2Discovered: 0
   part3Discovered: 0
@@ -1842,7 +1842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -69.99997}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &207325117
@@ -4762,7 +4762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -453.99997}
+  m_AnchoredPosition: {x: 0, y: -454}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &433362525
@@ -7549,11 +7549,11 @@ MonoBehaviour:
   evidenceTitle: 03 // SYNCHRONIZATION TRIAL 17
   evidenceRecord: "SUBJECT 17 \u2014 TEMPORAL SYNCHRONIZATION\r\n\r\nThe first regression
     remained stable for nearly three minutes.\r\nSubsequent regressions produced
-    progressively shorter windows of subjective time.\r\nAudio playback accelerated with
-    each return.\r\nThe subject reported:\r\n\"The room is the same, but time is
-    running out faster every time.\"\r\nResearchers concluded that subjective memory
-    cannot sustain unlimited regression.\n\r\n**Repeated returns eventually result
-    in complete temporal collapse.**"
+    progressively shorter windows of subjective time.\r\nAudio playback accelerated
+    with each return.\r\nThe subject reported:\r\n\"The room is the same, but time
+    is running out faster every time.\"\r\nResearchers concluded that subjective
+    memory cannot sustain unlimited regression.\n\r\n**Repeated returns eventually
+    result in complete temporal collapse.**"
 --- !u!114 &664387636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12593,7 +12593,8 @@ MonoBehaviour:
 
 
 
-    **Do not interrupt both anchors simultaneously.**'
+    **Do not interrupt both anchors
+    simultaneously.**'
 --- !u!114 &1354541926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17515,7 +17516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimeLoopManager
   musicSource: {fileID: 727368719}
   metronomeSource: {fileID: 544039486}
-  loopTime: 9
+  loopTime: 100
   countdownTimer: {fileID: 421393489}
   initialTimeLimit: 180
   timePenalty: 30
@@ -18702,7 +18703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -194.99997}
+  m_AnchoredPosition: {x: 0, y: -195}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900864721
@@ -19210,13 +19211,14 @@ MonoBehaviour:
   m_text: 'CONSCIOUSNESS REGRESSION CONFIRMED
 
 
-    Your subjective awareness has returned to the moment you first entered this room.
+    Your subjective awareness has
+    returned to the moment you first entered this room.
 
-    The
-    melody is accelerating.
+    The melody is accelerating.
 
 
-    NEXT SYNCHRONIZATION
+    NEXT
+    SYNCHRONIZATION
 
     MM:SS'
   m_isRightToLeft: 0
@@ -19314,7 +19316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -69.99997}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1942391006
