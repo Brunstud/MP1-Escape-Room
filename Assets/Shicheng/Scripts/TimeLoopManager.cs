@@ -56,6 +56,10 @@ public class TimeLoopManager : MonoBehaviour
     public GameObject reEnterLoopButton;
     public GameObject restartExperimentButton;
 
+    public GameObject dreamPanel;
+    public TMP_Text dreamText;
+    public float dreamHoldTime = 3f;
+    public float dreamFadeTime = 1.5f;
 
     // -------------------------
     // Internal state
@@ -69,15 +73,25 @@ public class TimeLoopManager : MonoBehaviour
     private static bool resetPlayerToStart = false;
     private static float currentTimeLimit = -1f;
     private static int loopCount = 0;
+    private static bool knowsLoopMechanism = false;
+
+    public static bool KnowsLoopMechanism => knowsLoopMechanism;
+
+    public static void RevealLoopKnowledge()
+    {
+        knowsLoopMechanism = true;
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (!resetPlayerToStart)
+        bool returnedFromRegression = resetPlayerToStart;
+        if (!returnedFromRegression)
         {
             currentTimeLimit = initialTimeLimit;
             loopCount = 0;
+            knowsLoopMechanism = false;
         }
 
         if (countdownTimer != null)
@@ -91,6 +105,8 @@ public class TimeLoopManager : MonoBehaviour
 
         if (failurePanel != null)
             failurePanel.SetActive(false);
+        if (dreamPanel != null)
+            dreamPanel.SetActive(false);
 
 
         FindXROrigin();
@@ -101,7 +117,7 @@ public class TimeLoopManager : MonoBehaviour
 
 
         // Scene was reloaded by rewind or restart
-        if (resetPlayerToStart)
+        if (returnedFromRegression)
         {
             resetPlayerToStart = false;
 
@@ -116,7 +132,7 @@ public class TimeLoopManager : MonoBehaviour
         if (rewinding || gameFailed)
             return;
 
-        if (musicSource == null || metronomeSource == null)
+        if (musicSource == null)
             return;
 
 
@@ -139,10 +155,17 @@ public class TimeLoopManager : MonoBehaviour
             previousMusicTime >= loopTime - 1f;
 
 
-        if ((reachedLoopTime || musicLooped) &&
-            metronomeSource.isPlaying)
+        if (reachedLoopTime || musicLooped)
         {
-            RewindRoom();
+            if (metronomeSource == null || !metronomeSource.isPlaying)
+                ShowPermanentFailure();
+            else if (!knowsLoopMechanism)
+                RewindRoom();
+            else
+            {
+                UpdateFailureText();
+                ShowFailurePanel();
+            }
             return;
         }
 
@@ -188,23 +211,14 @@ public class TimeLoopManager : MonoBehaviour
         if (gameFailed || rewinding)
             return;
 
-        if (GetNextTimeLimit() <= 0f)
-        {
-            ShowPermanentFailure();
-            return;
-        }
-
-        bool metronomeWasPlaying =
-            metronomeSource != null && metronomeSource.isPlaying;
-
-        UpdateFailureText(metronomeWasPlaying);
-
-        ShowFailurePanel();
+        ShowPermanentFailure();
     }
 
     private void ShowFailurePanel()
     {
         gameFailed = true;
+        if (dreamPanel != null)
+            dreamPanel.SetActive(false);
         if (countdownTimer != null)
             countdownTimer.StopTimer();
 
@@ -264,6 +278,7 @@ public class TimeLoopManager : MonoBehaviour
         currentTimeLimit = -1f;
         loopCount = 0;
         resetPlayerToStart = false;
+        knowsLoopMechanism = false;
         GameSessionData.ResetResults();
         GameSessionData.LabMode = LabEntryMode.Initial;
         CrossSceneCarryManager.Instance.ClearCarriedObjects();
@@ -298,19 +313,19 @@ public class TimeLoopManager : MonoBehaviour
         return true;
     }
 
-    private void UpdateFailureText(bool metronomeWasPlaying)
+    private void UpdateFailureText()
     {
         if (failureTitleText != null)
-            failureTitleText.text = "TEMPORAL WINDOW EXPIRED";
+            failureTitleText.text = "TEMPORAL REGRESSION DETECTED";
 
         if (failureBodyText != null)
         {
             failureBodyText.text =
-                "SUBJECTIVE TIME EXPIRED\n\n" +
-                "The reconstructed memory can no longer\n" +
-                "bhold this timeline.\n\n" +
-                "Every return destabilizes the anchor\n" +
-                "and compresses the next temporal window.";
+                "SYNCHRONIZATION POINT REACHED\n\n" +
+                "The melody has reached the regression point.\n" +
+                "The metronome is sustaining the temporal anchor.\n\n" +
+                "Confirming the regression will reconstruct the room\n" +
+                "and compress the next temporal window.";
         }
 
         if (nextWindowText != null)
@@ -323,21 +338,10 @@ public class TimeLoopManager : MonoBehaviour
         if (failureHintText == null)
             return;
 
-        if (metronomeWasPlaying)
-        {
-            failureHintText.text =
-                "AION FIELD NOTE\n\n" +
-                "The metronome is still sustaining the regression.\n" +
-                "Break the rhythm before the melody returns.";
-        }
-        else
-        {
-            failureHintText.text =
-                "AION FIELD NOTE\n\n" +
-                "The return loop has been disrupted.\n" +
-                "Use the remaining window to finish reconstructing\n" +
-                "the Time Machine.";
-        }
+        failureHintText.text =
+            "AION FIELD NOTE\n\n" +
+            "SYNCHRONIZATION TRIAL 17 confirms the pattern.\n" +
+            "Each return accelerates the melody.";
     }
 
     private void ShowPermanentFailure()
@@ -393,6 +397,49 @@ public class TimeLoopManager : MonoBehaviour
 
         xrOrigin.transform.position = PlayerSpawn.position;
         xrOrigin.transform.rotation = PlayerSpawn.rotation;
+
+        if (!gameFailed && !rewinding)
+            yield return ShowDreamPanel();
+    }
+
+    private IEnumerator ShowDreamPanel()
+    {
+        if (dreamPanel == null)
+            yield break;
+
+        if (dreamText != null)
+        {
+            float currentPitch = Mathf.Min(1f + loopCount * pitchIncreasePerLoop, maxAudioPitch);
+            dreamText.text = knowsLoopMechanism
+                ? "TEMPORAL REGRESSION CONFIRMED\n\n" +
+                  "The room has reconstructed itself.\n" +
+                  "The melody is accelerating.\n\n" +
+                  "NEXT SYNCHRONIZATION\n" + FormatTime(loopTime / currentPitch)
+                : "It felt like a dream...\n\n" +
+                  "I could swear I have searched this room before.\n" +
+                  "But the music seems faster...";
+        }
+
+        CanvasGroup canvasGroup = dreamPanel.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
+            canvasGroup.alpha = 1f;
+        dreamPanel.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(dreamHoldTime);
+
+        if (canvasGroup != null)
+        {
+            float elapsed = 0f;
+            while (elapsed < dreamFadeTime)
+            {
+                elapsed += Time.unscaledDeltaTime;
+                canvasGroup.alpha = 1f - Mathf.Clamp01(elapsed / dreamFadeTime);
+                yield return null;
+            }
+            canvasGroup.alpha = 0f;
+        }
+
+        dreamPanel.SetActive(false);
     }
 
 

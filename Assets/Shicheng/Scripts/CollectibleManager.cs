@@ -46,6 +46,13 @@ public class CollectibleManager : MonoBehaviour
         if (pendingCollectible == null)
             return;
 
+        // Trial 17 only becomes "known" after the player confirms / archives it.
+        if (!string.IsNullOrEmpty(pendingCollectible.evidenceTitle) &&
+            pendingCollectible.evidenceTitle.Contains("SYNCHRONIZATION TRIAL 17"))
+        {
+            TimeLoopManager.RevealLoopKnowledge();
+        }
+
         AddCollectible();
         pendingCollectible.gameObject.SetActive(false);
         pendingCollectible = null;
