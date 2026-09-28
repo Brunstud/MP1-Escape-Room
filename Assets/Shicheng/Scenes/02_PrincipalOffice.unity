@@ -7549,7 +7549,7 @@ MonoBehaviour:
   evidenceTitle: 03 // SYNCHRONIZATION TRIAL 17
   evidenceRecord: "SUBJECT 17 \u2014 TEMPORAL SYNCHRONIZATION\r\n\r\nThe first regression
     remained stable for nearly three minutes.\r\nSubsequent regressions produced
-    progressively shorter reconstruction windows.\r\nAudio playback accelerated with
+    progressively shorter windows of subjective time.\r\nAudio playback accelerated with
     each return.\r\nThe subject reported:\r\n\"The room is the same, but time is
     running out faster every time.\"\r\nResearchers concluded that subjective memory
     cannot sustain unlimited regression.\n\r\n**Repeated returns eventually result
@@ -10227,10 +10227,10 @@ MonoBehaviour:
   m_text: 'SUBJECTIVE TIME EXPIRED
 
 
-    The reconstructed memory can no longer
+    Your subjective awareness can no longer
 
-    hold
-    this timeline.
+    sustain
+    the temporal anchor.
 
 
     Every return destabilizes the anchor
@@ -12588,8 +12588,8 @@ MonoBehaviour:
     The metronome provides synchronization.
 
     If both
-    anchors remain stable, the subject may return to the beginning of the reconstructed
-    interval.
+    anchors remain stable, the subject''s awareness may return to the mental state
+    corresponding to the moment of entry.
 
 
 
@@ -19207,10 +19207,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TEMPORAL REGRESSION CONFIRMED
+  m_text: 'CONSCIOUSNESS REGRESSION CONFIRMED
 
 
-    The room has reconstructed itself.
+    Your subjective awareness has returned to the moment you first entered this room.
 
     The
     melody is accelerating.

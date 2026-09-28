@@ -316,16 +316,17 @@ public class TimeLoopManager : MonoBehaviour
     private void UpdateFailureText()
     {
         if (failureTitleText != null)
-            failureTitleText.text = "TEMPORAL REGRESSION DETECTED";
+            failureTitleText.text = "CONSCIOUSNESS REGRESSION DETECTED";
 
         if (failureBodyText != null)
         {
             failureBodyText.text =
                 "SYNCHRONIZATION POINT REACHED\n\n" +
-                "The melody has reached the regression point.\n" +
+                "The melody has reached the synchronization point.\n" +
                 "The metronome is sustaining the temporal anchor.\n\n" +
-                "Confirming the regression will reconstruct the room\n" +
-                "and compress the next temporal window.";
+                "Confirming will return your subjective awareness\n" +
+                "to the moment you first entered this room.\n" +
+                "Your next window of subjective time will be shorter.";
         }
 
         if (nextWindowText != null)
@@ -411,8 +412,9 @@ public class TimeLoopManager : MonoBehaviour
         {
             float currentPitch = Mathf.Min(1f + loopCount * pitchIncreasePerLoop, maxAudioPitch);
             dreamText.text = knowsLoopMechanism
-                ? "TEMPORAL REGRESSION CONFIRMED\n\n" +
-                  "The room has reconstructed itself.\n" +
+                ? "CONSCIOUSNESS REGRESSION CONFIRMED\n\n" +
+                  "Your subjective awareness has returned\n" +
+                  "to the moment you first entered this room.\n" +
                   "The melody is accelerating.\n\n" +
                   "NEXT SYNCHRONIZATION\n" + FormatTime(loopTime / currentPitch)
                 : "It felt like a dream...\n\n" +
