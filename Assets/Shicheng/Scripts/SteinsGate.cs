@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using System.Collections;
 
 public class TimeMachineGate : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class TimeMachineGate : MonoBehaviour
     public CollectibleManager collectibleManager;
     public XRBaseInteractor leftInteractor;
     public XRBaseInteractor rightInteractor;
+
+    // NEW
+    public GameObject winCanvas;
+    public float transitionDelay = 2f;
 
     private bool travelling = false;
 
@@ -24,18 +29,46 @@ public class TimeMachineGate : MonoBehaviour
         }
 
         travelling = true;
+
+        // Save results before the transition delay
         GameSessionData.ResetResults();
+
         if (countdownTimer != null)
-            GameSessionData.PrincipalRemainingTime = countdownTimer.TimeLeft;
+        {
+            GameSessionData.PrincipalRemainingTime =
+                countdownTimer.TimeLeft;
+
+            // Freeze final score while transition UI is shown
+            countdownTimer.StopTimer();
+        }
 
         if (collectibleManager != null)
         {
-            GameSessionData.PrincipalCollectedCount = collectibleManager.CollectedCount;
-            GameSessionData.PrincipalTotalCollectibles = collectibleManager.TotalCollectibles;
+            GameSessionData.PrincipalCollectedCount =
+                collectibleManager.CollectedCount;
+
+            GameSessionData.PrincipalTotalCollectibles =
+                collectibleManager.TotalCollectibles;
         }
 
         GameSessionData.LabMode = LabEntryMode.FinalWin;
-        CrossSceneCarryManager.Instance.CaptureHeldObjects(leftInteractor, rightInteractor);
+
+        // Show transition UI
+        if (winCanvas != null)
+            winCanvas.SetActive(true);
+
+        StartCoroutine(TravelToAION());
+    }
+
+    private IEnumerator TravelToAION()
+    {
+        yield return new WaitForSeconds(transitionDelay);
+
+        CrossSceneCarryManager.Instance.CaptureHeldObjects(
+            leftInteractor,
+            rightInteractor
+        );
+
         SceneManager.LoadScene("00_AIONLab");
     }
 }
