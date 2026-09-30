@@ -1812,7 +1812,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1259.3718, y: 728.78314, z: 1255.0704, w: 727.51733}
+  m_margin: {x: 1564.0626, y: 728.78314, z: 1578.2032, w: 727.51733}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4886,7 +4886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -453.99997}
+  m_AnchoredPosition: {x: 0, y: -454}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &433362525
@@ -16847,7 +16847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.36
+  m_ScaleFactor: 0.3
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -19043,7 +19043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -194.99997}
+  m_AnchoredPosition: {x: 0, y: -195}
   m_SizeDelta: {x: -380, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900864721
@@ -20820,7 +20820,7 @@ Transform:
   m_GameObject: {fileID: 2111686593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.288, y: 0.77, z: -1.06}
+  m_LocalPosition: {x: 5.8785, y: 1.83, z: -4.854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

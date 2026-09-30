@@ -256,63 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8883218}
   m_CullTransparentMesh: 1
---- !u!1001 &30826268
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.19632
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.42795
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_Name
-      value: XR Device Simulator
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
 --- !u!1 &99395032
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +545,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 51008172edbdc497697107c241ae141a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1035927403}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 51008172edbdc497697107c241ae141a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1035927406}
   m_SourcePrefab: {fileID: 100100000, guid: 51008172edbdc497697107c241ae141a, type: 3}
 --- !u!1 &185129549
 GameObject:
@@ -2628,11 +2574,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544944940}
   m_CullTransparentMesh: 1
---- !u!1 &546202035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2107409826236812522, guid: 120c2714ced404f79be2e66e05998c71, type: 3}
-  m_PrefabInstance: {fileID: 1839938983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &556270008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,11 +5794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e44d56745857584fa02bb3706015564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhysicsRoomTimeMachineGate
-  glassCover: {fileID: 546202035}
-  machineInteractable: {fileID: 1035927404}
-  transferCanvas: {fileID: 1936439242}
-  transitionDelay: 2
-  nextSceneName: 02_PrincipalOffice
 --- !u!114 &1035927404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5925,7 +5861,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035927403}
+      - m_Target: {fileID: 1035927406}
         m_TargetAssemblyTypeName: PhysicsRoomTimeMachineGate, Assembly-CSharp
         m_MethodName: UseTimeMachine
         m_Mode: 1
@@ -5968,6 +5904,23 @@ CapsuleCollider:
   m_Height: 9.1446085
   m_Direction: 1
   m_Center: {x: 0.102456, y: 3.8488908, z: 0.12665232}
+--- !u!114 &1035927406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035927401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689f368b1861cec4086a60add255008a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhysicsRoomTimeMachineGate
+  glassCover: {fileID: 1936439242}
+  machineInteractable: {fileID: 1035927404}
+  transferCanvas: {fileID: 1683117318}
+  transitionDelay: 2
+  nextSceneName: 02_PrincipalOffice
 --- !u!1 &1114073002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6027,18 +5980,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AION TEMPORAL TRANSFER
 
-    
+
 
     DESTINATION LOCKED
 
-    
 
-    100
-    YEARS AGO
 
-    PRINCIPAL''S OFFICE
+    100 YEARS AGO
 
-    
+    PRINCIPAL''S
+    OFFICE
+
+
 
     Initiating temporal transfer...'
   m_isRightToLeft: 0
@@ -9157,7 +9110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.6
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -10340,7 +10293,7 @@ MonoBehaviour:
   winAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035927403}
+      - m_Target: {fileID: 1035927406}
         m_TargetAssemblyTypeName: PhysicsRoomTimeMachineGate, Assembly-CSharp
         m_MethodName: UnlockMachine
         m_Mode: 1
@@ -11889,7 +11842,6 @@ SceneRoots:
   - {fileID: 1193851881}
   - {fileID: 1160959280}
   - {fileID: 892634054}
-  - {fileID: 30826268}
   - {fileID: 1727496346}
   - {fileID: 1593281848}
   - {fileID: 177595334}

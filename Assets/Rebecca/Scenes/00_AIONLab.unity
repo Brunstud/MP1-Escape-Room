@@ -7393,7 +7393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LockManager
   locksCompleted: 0
   winMessage: {fileID: 1242623092}
-  nextSceneName: 02_PrincipalOffice
+  nextSceneName: 01_PhysicsRoom
   transitionDelay: 2
   leftInteractor: {fileID: 0}
   rightInteractor: {fileID: 0}
@@ -7974,7 +7974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.6
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -13703,7 +13703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.7
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

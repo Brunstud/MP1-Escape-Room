@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "MP1 Escape Room.slnx"
+    "dotnet.defaultSolution": "MP1-Escape-Room.slnx"
 }
