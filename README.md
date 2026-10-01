@@ -1,5 +1,3 @@
----
-
 # AION — Time Travel Escape Room
 
 **Course:** CS 498 VR
