@@ -1,11 +1,14 @@
 # AION — Time Travel Escape Room
 
-**Course:** CS 498 VR
+**Course:** CS 498 - Intro to Extended Reality
+
 **Team:** 17
-**Integration Branch:** `mp1c-integration`
+
 **Itch.io Build Link:** [https://brunstud.itch.io/mp1-escaped-room](https://brunstud.itch.io/mp1-escaped-room)
 
-## Team
+**Integration Branch:** `mp1c-integration`
+
+## Team members
 
 - **Rebecca Samuel**
 - **Adhav Saravanan**
