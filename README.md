@@ -4,15 +4,15 @@
 
 **Team:** 17
 
-**Itch.io Build Link:** [https://brunstud.itch.io/mp1-escaped-room](https://brunstud.itch.io/mp1-escaped-room)
+**Itch.io Build Link:** [AION: The Missing Archive](https://brunstud.itch.io/mp1-escaped-room)
 
-**Integration Branch:** `mp1c-integration`
+![AION](Screenshots/AION_TimeTravelEscapeRoom.png)
 
 ## Team members
 
+- **Shicheng Hu**
 - **Rebecca Samuel**
 - **Adhav Saravanan**
-- **Shicheng Hu**
 
 ## Overview
 
