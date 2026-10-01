@@ -8,7 +8,7 @@ public class LockManager : MonoBehaviour
     public int locksCompleted = 0;
     public GameObject winMessage;
 
-    public string nextSceneName = "02_PrincipalOffice";
+    public string nextSceneName = "01_PhysicsRoom";
     public float transitionDelay = 2f;
     public XRBaseInteractor leftInteractor;
     public XRBaseInteractor rightInteractor;

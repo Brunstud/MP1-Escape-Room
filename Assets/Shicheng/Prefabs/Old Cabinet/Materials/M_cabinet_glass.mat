@@ -119,6 +119,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _WorkflowMode: 1
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 0.9772713, b: 0.9292453, a: 1}
